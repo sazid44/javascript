@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for(var x=1; x<=10; x=x+1){
+    document.write(' a'); 
+        }
+        document.write('END'); 
+for(var x=1; x<=100; x=x+1){
+    if(x==10){
+        break;
+    }
+    document.write(' '+x); 
+}
+document.write('END'); 
+for(var x=1; x<=100; x=x+1){
+    
+    document.write(' '+x);
+    if(x==10){
+        break;
+    }
+}
+document.write('END'); 
+for(var x=1; x<=20; x=x+1){
+    
+    document.write(' '+x);
+    if(x==10){
+        continue;
+    }
+}
+document.write('END'); 
+for(var x=1; x<=20; x=x+1){
+    if(x==10){
+        continue;
+    }
+    document.write(' '+x);
+    
+}
+document.write('END'); 
+/*let m=parseInt(prompt('Enter first number :'));
+let n=parseInt(prompt('Enter last number:'));
+
+var sum=0;
+for(var x=m; x<=n; x=x+1){
+    sum=sum+x;
+}
+document.write(sum); */
+//use of function
+function squre(num1,num2){
+    var result=num1*num2;
+    document.write('sum='+result);
+}
+squre(5,6)
+//Use of Array
+//method 01
+var names=['a','b','c','d','e']
+console.log(names[0]);
+//method 02
+
+//use of splice method in array
+names.splice(4,0,'f','g','h')
+console.log(names);
+
+
+//Use of getElementBythings and querySelector/////
+
+document.getElementById('b').innerHTML='Sazid';//document.querySelector('#b').innerHTML='Sazid';
+//or, var heading=document.getElementById('b');//heading.innerHTML='Sazid';
+document.getElementsByTagName('h1')[1].innerHTML='Hello';//document.querySelector('h1').innerHTML='Sazid';
+document.getElementsByClassName('p')[0].innerHTML='Hi';//document.querySelector('.p').innerHTML='Sazid';
+document.querySelector('li a').innerHTML='Js';
+    </script>
+</head>
+<body>
+    <h1 id='b'>Bangladesh</h1>
+    <h1>Sazid</h1>
+    <h1 class='p'>Sazid1</h1>
+    <ul>
+        <li><a href='#'>Home</a></li>
+    </ul>
+</body>
+</html>
