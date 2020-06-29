@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document not </title>
+    <title>Document </title>
     <script>
 //FOR LOOP
 for( x=1; x<=3; x=x+1){
@@ -84,23 +84,20 @@ console.log(names[0]);
 //use of splice method in array
 names.splice(4,0,'f','g','h')
 console.log(names);
-
-
+names.splice(1,2)
+console.log(names);
+var newArray=names.slice(1,2)
+console.log(newArray);
+console.log(names);
+var sortedNames=names.sort()
+console.log(sortedNames);
+var n=[4,2,3]
+n.sort(function(a,b){
+return a-b
+})
+console.log(n);
 //Use of getElementBythings and querySelector/////
 
-document.getElementById('b').innerHTML='Sazid';//document.querySelector('#b').innerHTML='Sazid';
-//or, var heading=document.getElementById('b');//heading.innerHTML='Sazid';
-document.getElementsByTagName('h1')[1].innerHTML='Hello';//document.querySelector('h1').innerHTML='Sazid';
-document.getElementsByClassName('p')[0].innerHTML='Hi';//document.querySelector('.p').innerHTML='Sazid';
-document.querySelector('li a').innerHTML='Js';
-    </script>
-</head>
-<body>
-    <h1 id='b'>Bangladesh</h1>
-    <h1>Sazid</h1>
-    <h1 class='p'>Sazid1</h1>
-    <ul>
-        <li><a href='#'>Home</a></li>
-    </ul>
+
 </body>
 </html>

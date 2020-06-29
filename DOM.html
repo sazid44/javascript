@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <script>
+        //let's change Bangladesh to Ban
+    document.getElementById('b').innerHTML='Ban';
+    document.querySelector('#b').innerHTML='Ban';
+ var heading=document.getElementById('b');
+ heading.innerHTML='Ban';
+//let's change India to hello
+document.getElementsByTagName('h1')[1].innerHTML='Hello';
+document.querySelector('h1').innerHTML='Hello';
+document.querySelectorAll('h1')[1].innerHTML='Hello';
+//let's change Pakistan to Kashmir
+document.getElementsByClassName('p')[0].innerHTML='Kashmir';
+document.querySelector('.p').innerHTML='Kashmir';
+document.querySelectorAll('.p')[0].innerHTML='Kashmir';
+//let's change home to Js
+document.querySelector('li a').innerHTML='Js';
+    </script>
+<body>
+
+    <h1 id='b'>Bangladesh</h1>
+    <h1>India</h1>
+    <h1 class='p'>Pakistan</h1>
+    <ul>
+        <li><a href='#'>Home</a></li>
+    </ul>
+</body>
+</html>
