@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1 id='b'>Bangladesh</h1>
+   <h1>India</h1>
+   <h1 class='p'>Pakistan</h1>
+   <ul>
+       <li><a href='#'>Home</a></li>
+   </ul>
+
+    <p>Enter a number between 5 to 10:</p>
+    <input type="text" id="num">
+    <button id="check">check</button>
+</body>
+</html>
+<script>
+   var num=20
+num=toString(num);
+console.log(typeof(num))
+var num1='sazid'
+num1=parseInt(num1); // num=parseFloat(num)
+console.log(typeof(num1))
+var number=2.3612
+console.log(number.toFixed(2)) //2.36
+console.log(number.toPrecision(2))//2.4
+console.log(typeof(Number(num1)))
+var text = 'sazid' , text1='bangladesh'
+console.log(text.concat( text1))
+console.log(text.slice(0,2));
+
+        //let's change Bangladesh to Ban
+    document.getElementById('b').innerHTML='Ban';
+    document.querySelector('#b').innerHTML='Ban';
+ var heading=document.getElementById('b');
+ heading.innerHTML='Ban';
+//let's change India to hello
+document.getElementsByTagName('h1')[1].innerHTML='Hello';
+document.querySelector('h1').innerHTML='Hello';
+document.querySelectorAll('h1')[1].innerHTML='Hello';
+//let's change Pakistan to Kashmir
+document.getElementsByClassName('p')[0].innerHTML='Kashmir';
+document.querySelector('.p').innerHTML='Kashmir';
+document.querySelectorAll('.p')[0].innerHTML='Kashmir';
+//let's change home to Js
+document.querySelector('li a').innerHTML='Js';
+
+
+
+//Error handling
+//It can handle only runtime error
+try{
+    alert('hello')
+    alert(x)
+ }catch(err){
+    alert('error')
+    console.log(err);
+    console.log(err.name);
+    console.log(err.message);
+ }finally{
+    alert('final message')
+ }
+ 
+document.querySelector('#check').addEventListener('click', function(){
+    var inputValue=document.querySelector('#num').value;
+    console.log(inputValue);
+ 
+    try{
+ if(inputValue<5){
+   throw 'Input is too low'
+ }else if(inputValue>10){
+   throw 'Input is too big'
+ }
+ 
+ }catch(err){
+ 
+    console.log(err) 
+    }
+ }) 
+</script>
+

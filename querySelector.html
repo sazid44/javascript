@@ -11,12 +11,26 @@
     <button onclick="myMessage1()">Click here</button>
     <button onclick="mypic1()">pic1</button>
     <button onclick="mypic2()">pic2</button>
-    <p>demo</p>
+   <p>demo</p>
     <img id="s" src="#" alt="" />
-   
+
+    <textarea name="" id="a" cols="30" rows="20"></textarea>
+    <p id='c'>demo</p>
+    <p id='b'>Demo</p>
     
     
     <script>
+      var count = 0;
+      document.querySelector("#a").addEventListener("keypress", function (event) {
+          var text = event.key;
+          count++;
+          document.querySelector("#c").innerHTML =
+            "You have typed  " + count + " character";
+        });
+        document.addEventListener('keypress',function(event){
+        var text = event.key;
+        document.querySelector('#b').innerHTML=' You have typed ' + text;
+        })
       var data = document.querySelector("p");
       function myMessage() {
         data.innerHTML = "Are you kidding me";
@@ -34,6 +48,7 @@
       }
 
      
+       
     </script>
   </body>
 </html>

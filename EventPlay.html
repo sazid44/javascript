@@ -7,11 +7,25 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <button class='myButton'>button1</button>
+  <button class='myButton'>button2</button>
+  <button class='myButton'>button3</button>
+<h1>Click any Button</h1>
+
     <button class='myB a'>a</button>
     <button class='myB b'>b</button>
     <button class='myB c'>c</button>
 </body>
 <script>
+
+var len=document.querySelectorAll('.myButton').length;
+for(i=0; i<len; i++){
+document.querySelectorAll('.myButton')[i].addEventListener('click', function(){
+var text=this.innerHTML;
+document.querySelector('h1').innerHTML= text  +  ' is clicked'
+}
+)}
 
     var len=document.querySelectorAll('.myB').length;
     for(i=0; i<len; i++){
@@ -55,16 +69,5 @@ document.addEventListener('keypress',function(event){
       selectedButton.classList.remove('anim')
     }, 1000)
     }
-
-
-
-
-
-
-
-
-
-
-
 </script>
 </html>
