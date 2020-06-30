@@ -57,6 +57,8 @@ for( x=1; x<=10; x=x+1){
     
 }
 document.write('END'); 
+
+
 //Use of forEach
 numbers=[10,20,30,40,50]
 squreNumbers=[]
@@ -71,11 +73,15 @@ numbers.forEach(function (x,index,arr){
 arr[index]=x+5;
 })
 console.log(numbers);
+
+
 //MAP function
 newArray=numbers.map(function (x){
 return x*x;
 })
 console.log(newArray);
+
+
 //FILTER function
 filteredArray=numbers.filter(function (x){
 return x>10
@@ -99,10 +105,10 @@ squre(5,6)
 //Use of Array
 //method 01
 var names=['a','b','c','d','e']
-names.push('f')
-names.unshift('f') //opposite of push
-names.pop()
-names.shift() //opposite of pop
+names.push('f')//pushes element at the last
+names.unshift('f') //pushes element at the first
+names.pop()//deletes element from the last
+names.shift() //deletes element from the first
 
 console.log(names[0]);
 
@@ -121,7 +127,7 @@ n.sort(function(a,b){
 return a-b
 })
 console.log(n);
-//Use of getElementBythings and querySelector/////
+
 
 </script>
 </body>
