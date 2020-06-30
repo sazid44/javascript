@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
-    <title>I am tired 1</title>
+    <title>Document</title>
   </head>
   <body>
-    <textarea name="" id="a" cols="50" rows="50"></textarea>
-    <p>Press Here</p>
-
+<textarea name="" id="a" cols="30" rows="20"></textarea>
+    <p>write in the box</p>
+    <p id='b'>Demo</p>
+    <p>Enter a number between 5 to 10:</p>
+    <input type="text" id="num">
+    <button id="check">check</button>
     <script>
       var count = 0;
       document.querySelector("#a").addEventListener("keypress", function (event) {
@@ -17,6 +20,31 @@
           document.querySelector("p").innerHTML =
             "You have typed  " + count + " character";
         });
+        document.addEventListener('keypress',function(event){
+        var text = event.key;
+        document.querySelector('#b').innerHTML=' You have typed ' + text;
+        })
+        document.querySelector('#check').addEventListener('click', function(){
+   var inputValue=document.querySelector('#num').value;
+   console.log(inputValue);
+
+   try{
+if(inputValue<5){
+  throw 'Input is too low'
+}else if(inputValue>10){
+  throw 'Input is too big'
+}
+
+}catch(err){
+
+   console.log(err) 
+   
+}
+
+
+
+})
+
     </script>
   </body>
 </html>

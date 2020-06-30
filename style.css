@@ -10,3 +10,13 @@
     font-style: italic;
     font-size: medium;
 }
+button{
+  width: 50px;
+height: 50px;
+background-color: green;
+color: white;
+}
+.anim{
+    box-shadow: 0 15px 18px 0 tomato;
+    opacity: 0.5;
+}

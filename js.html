@@ -57,6 +57,31 @@ for( x=1; x<=10; x=x+1){
     
 }
 document.write('END'); 
+//Use of forEach
+numbers=[10,20,30,40,50]
+squreNumbers=[]
+numbers.forEach(function (x){
+console.log(x);
+})
+numbers.forEach(function (x){
+squreNumbers.push(x*x)
+})
+console.log(squreNumbers);
+numbers.forEach(function (x,index,arr){
+arr[index]=x+5;
+})
+console.log(numbers);
+//MAP function
+newArray=numbers.map(function (x){
+return x*x;
+})
+console.log(newArray);
+//FILTER function
+filteredArray=numbers.filter(function (x){
+return x>10
+})
+console.log(filteredArray);
+
 /*let m=parseInt(prompt('Enter first number :'));
 let n=parseInt(prompt('Enter last number:'));
 
