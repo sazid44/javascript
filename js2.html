@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+  
   </head>
   <body>
     <button onclick="myMessage()">Click here</button>
@@ -13,11 +13,9 @@
     <button onclick="mypic2()">pic2</button>
     <p>demo</p>
     <img id="s" src="#" alt="" />
-
-    <p id="para">Change the style by clicking</p>
-    <button onclick="addstyle()">add style</button>
-    <button onclick="removestyle()">remove style</button>
-    <p id="para1">Hover here to change</p>
+   
+    
+    
     <script>
       var data = document.querySelector("p");
       function myMessage() {
@@ -35,23 +33,7 @@
         pic.src = "images/agri.jpg";
       }
 
-      var style = document.querySelector("#para");
-      function addstyle() {
-        style.classList.add("css");
-      }
-      function removestyle() {
-        style.classList.remove("css");
-      }
-
-      var style1 = document.querySelector("#para1");
-
-      style1.addEventListener("mouseover", function () {
-        style1.classList.add("css1");
-      });
-
-      style1.addEventListener("mouseout", function () {
-        style1.classList.remove("css1");
-      });
+     
     </script>
   </body>
 </html>

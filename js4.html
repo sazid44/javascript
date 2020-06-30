@@ -4,10 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <canvas id='canva' height='400px' width='300px'></canvas>
-    <script src=js4.js type='text/javascript'></script>
+    <p id="para">Change the style by clicking</p>
+    <button onclick="addstyle()">add style</button>
+    <button onclick="removestyle()">remove style</button>
+    <p id="para1">Hover here to change</p>
+     
+
+
+    <script>
+ var style1 = document.querySelector("#para");
+      function addstyle() {
+        style1.classList.add("css");
+        //style1.style.color='blue'
+        //style1.style.fontSize='3rem'
+      }
+      function removestyle() {
+        style1.classList.remove("css");
+      }
+
+      var style2 = document.querySelector("#para1");
+      /*style2.addEventListener("mouseover",myFunction)
+      function myFunction() {
+        style2.classList.add("css1");
+      }
+*/
+      style2.addEventListener("mouseover", function () {
+        style2.classList.add("css1");
+      });
+
+      style2.addEventListener("mouseout", function () {
+        style2.classList.remove("css1");
+      });
+
+
+
+
+</script>
     
 </body>
+
+
 </html>
