@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <input type="text" id='p1'><br><br>
+    <input type="text" id='p2'><br><br>
+    <input type="submit" id='login'><br><br>
+    <button id='myButton'>add animation</button>
+    <button id='myBtn'>Hide</button>
+    <button id='myBtn1'>Show</button>
+    <button id='myBtn2'>Show & Hide</button>
+    <button id='myBtn3'>Toggle button</button>
+    <button id='myBtn4'>fadeIn</button>
+    <button id='myBtn5'>fadeOut</button>
+    <button id='myBtn6'>fadeIn & fadeOut</button>
+    <button id='myBtn7'>Toggle fade</button>
+    <button id='myBtn8'> fadeto</button>
+    <button id='myBtn9'>slideUp</button>
+    <button id='myBtn10'> slideDown </button>
+    <button id='myBtn11'>slideUp & slideDown </button>
+    <button id='myBtn12'>Toggle slide </button>
+    
+    <div id='myDiv' class='my-style'><p>Ea consetetur voluptua diam consetetur eirmod. Ea et est eirmod amet erat nonumy et, rebum sadipscing nonumy kasd sit ut elitr lorem et, ut dolor dolore erat sadipscing lorem sea dolores ipsum, ipsum diam sadipscing dolore sanctus eirmod kasd, dolor gubergren lorem dolores et no erat amet, dolore rebum elitr justo dolores sed, vero duo takimata lorem lorem et sed amet rebum, dolore dolor tempor diam stet. Clita sit eirmod duo magna amet accusam voluptua justo. Sit magna consetetur vero et et. Eirmod tempor ipsum tempor diam sanctus. Lorem sit dolor invidunt ipsum, sadipscing amet sit sea ut, dolores et ipsum erat tempor amet eirmod at labore takimata. Dolor elitr ea takimata sed, dolores sea rebum magna takimata eirmod dolore est ipsum, ut ea dolor nonumy justo eos ipsum, eos ea dolor aliquyam consetetur erat kasd sit stet, at et lorem erat sed erat labore, ipsum sea clita et stet sed lorem elitr et. Sit magna voluptua kasd amet tempor at est lorem. Et nonumy amet lorem lorem, elitr nonumy sanctus dolores tempor, ut kasd sit sed kasd diam erat kasd. Vero diam justo clita justo vero justo, at gubergren lorem sanctus tempor lorem, dolor sea et ea amet justo.</p>
+    </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+$('#login').click(function(){
+    var pass1=$('#p1').val()
+    var pass2=$('#p2').val()
+if(pass1!="" && pass2!=""){
+  if(pass1==pass2){
+      alert('Successfully login')
+  }else{
+      alert('Something went wrong')
+  }
+}else{
+    alert('Please enter password')
+}
+})
+$('#myButton').click(function(){
+    $('#myDiv').animate({"background-color":"green"},1000);
+})
+
+$('#myBtn').click(function(){
+    $('#myDiv').hide(2000)
+})
+$('#myBtn1').click(function(){
+    $('#myDiv').show()
+})
+$('#myBtn2').click(function(){
+    $('#myDiv').show(2000).hide(1000)
+})
+$('#myBtn3').click(function(){
+    $('#myDiv').toggle()
+})
+$('#myBtn4').click(function(){
+    $('#myDiv').fadeIn(2000)
+})
+$('#myBtn5').click(function(){
+    $('#myDiv').fadeOut()
+})
+$('#myBtn6').click(function(){
+    $('#myDiv').fadeIn(2000).fadeOut(1000)
+})
+$('#myBtn7').click(function(){
+    $('#myDiv').fadeToggle()
+})
+$('#myBtn8').click(function(){
+    $('#myDiv').fadeTo(2000,0.7)
+})
+$('#myBtn9').click(function(){
+    $('#myDiv').slideUp()
+})
+$('#myBtn10').click(function(){
+    $('#myDiv').slideDown()
+})
+$('#myBtn11').click(function(){
+    $('#myDiv').slideUp(2000).slideDown(1000)
+})
+$('#myBtn12').click(function(){
+    $('#myDiv').slideToggle()
+})
+
+
+    </script>
+</body>
+</html>

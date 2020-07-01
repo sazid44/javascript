@@ -1,3 +1,4 @@
+/*
 var name='sazid',age=17,gpa=2.5,lang=[bangla,english]
 var name='rahim',age=16,gpa=3.5,lang=[bangla,english,hindi]
 var name='karim',age=18,gpa=4.5,lang=[bangla,english,manderin]
@@ -25,6 +26,7 @@ var student3={
    lang=[bangla,english,manderin]
 }
 console.log(student3.name);
+*/
  //Use of constructor
  function Student(name,age,gpa,lang){
      this.name=name
@@ -47,7 +49,7 @@ student1.display()
 student2.display()
 student3.display()
 
-
+/*
 console.log(student1.name);
 console.log(student1.age);
 console.log(student1.gpa);
@@ -62,3 +64,4 @@ console.log(student3.name);
 console.log(student3.age);
 console.log(student3.gpa);
 console.log(student3.lang);
+*/

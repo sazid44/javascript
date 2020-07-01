@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <a href="http://google.com" target="blank">google</a>
+    <h1 class=my-class>demo</h1>
+    <div ><h1>Bangladesh</h1> </div>
+    <h1 id=my-id>demo</h1>
+    <h1 id=second-id>demo</h1>
+    <p>This is para 1</p>
+    <h2>This is css with jquery</h2>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <h1 id=button>Click in the button</h1>
+    <button id='css'>Click me</button> <br><br><br>
+
+    <button class='myButton'>button1</button>
+    <button class='myButton'>button2</button>
+    <button class='myButton'>button3</button>
+  <h1 class='multi'>Click any Button</h1>
+    <script>
+        //document.querySelector('h1').innerHTML='sazid'
+        $('.my-class').text('sazid')
+        $('div h1').html('<i> sazid</i>')
+        $('#my-id').append(' country')
+        $('#my-id, #second-id').prepend(' no ')
+        var myPara=$('<p></p>').text('This is para 2')
+        $('p').before(myPara)
+        //$('p').after(myPara)
+//document.querySelector('a').getAttribute('href'); 
+//document.querySelector('a').setAttribute('href','https://www.studywithanis.com')
+$('a').attr('href')
+$('a').attr('href','https://www.studywithanis.com')
+//$('a').removeAttr('href')  
+ //CSS manipulation
+ //$('h2').css('font-size','3rem')   
+ //$('h2').css({'color':'green','font-style':'italic'}) 
+ $('h2').addClass('csStyle csStyle1')   
+ //document.querySelector('button').addEventListener('click',function(){
+    // document.querySelector('#button').innerHTML='You have clicked'})  
+   $('button').click(function(){
+     $('#button').text('You have clicked')})
+     $('#css').click(function(){
+     $('#button').toggleClass('csStyle1')})  
+  /*   var len=document.querySelectorAll('.myButton').length;
+for(i=0; i<len; i++){
+document.querySelectorAll('.myButton')[i].addEventListener('click', function(){
+var text=this.innerHTML;
+document.querySelector('h1').innerHTML= text  +  ' is clicked'
+}
+)}  */  
+$('.myButton').click(function(){
+var value=this.innerHTML;
+$('.multi').text(value + ' is clicked')})
+
+   
+    
+    
+    
+    </script>
+</body>
+</html>
