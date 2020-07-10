@@ -41,9 +41,9 @@ console.log(student3.name);
      console.log(this.lang);     
 }
 }
-var student1=new Student('sazid',17,2.5,[bangla,english])
-var student2=new Student('rahim',16,3.5,[bangla,english,hindi])
-var student3=new Student('karim',18,4.5,[bangla,english,manderin])
+var student1=new Student('sazid',17,2.5,'english')
+var student2=new Student('rahim',16,3.5,'hindi')
+var student3=new Student('karim',18,4.5,'manderin')
 
 student1.display()
 student2.display()

@@ -38,7 +38,8 @@ document.write(sum); */
 //use of function
 function squre(num1,num2){
     var result=num1*num2;
-    document.write('sum='+result);
+    console.log('sum='+result);
+   
 }
 squre(5,6)
 //Use of Array
