@@ -10,7 +10,15 @@
     font-style: italic;
     font-size: medium;
 }
-
+.css2{
+    color: lightseagreen;
+width: 400px;
+    height: 20px;
+  font-size: 2rem;
+ }
+ .background{
+     background-color: green;
+ }
 .anim{
     box-shadow: 0 15px 18px 0 tomato;
     opacity: 0.5;

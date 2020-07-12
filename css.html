@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <p id="para">Change the style by clicking</p>
+    <p class="hello" id="para">Change the style by clicking</p>
     <button onclick="addstyle()">add style</button>
     <button onclick="removestyle()">remove style</button>
+    <button onclick="togglestyle()">toggle style</button>
+    <button onclick="replacestyle()">replace style</button>
+    <button onclick="myFunction()">contain style</button>
+
     <p id="para1">Hover here to change</p>
      
     
@@ -24,7 +28,22 @@
       function removestyle() {
         style1.classList.remove("css");
       }
-
+      function togglestyle() {
+        style1.classList.toggle("css");
+      }
+      function replacestyle() {
+        style1.classList.replace("css","css2");
+      }
+      function myFunction(){
+        if(document.querySelector("#para").classList.contains("hello")){
+          document.querySelector('body').classList.add('background') ;
+        }else{
+          alert('Class not founded')
+        }
+      }
+   
+  
+     
       var style2 = document.querySelector("#para1");
       /*style2.addEventListener("mouseover",myFunction)
       function myFunction() {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    <button id="print">Print</button><br><br>
+    <div id="demo">
+        <input type="text" id="inputBox"/><h1 id="h1"></h1>
+         <h2></h2>
+    </div>
+
+<select name="" id="select">
+
+    <option value="" >Select Country</option>
+    <option value="1" >Bangladesh</option>
+    <option value="2" selected>India</option>
+    <option value="3">Pakistan</option>
+</select><br><br>
+
+<input type="text" id="fname" onchange="myFunction()">
+<!--Inner javascript-->
+   <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+   <script>
+   
+       document.querySelector('#select').addEventListener('change',function(){
+           var selectedNumber=this.value;
+           if(selectedNumber==1){
+               document.querySelector('#select').innerHTML='<select><option>Dhaka</option><option>Chittagong</option><option>Rajshahi</option></select>' ;
+           }else if(selectedNumber==2){
+               alert('you have selected India');
+           }else if(selectedNumber==3){
+               alert('you have selected Pakistan');
+           }else{
+            document.querySelector('#select').innerHTML='Choose any country';
+           }
+       }) ;
+    document.querySelector('#inputBox').addEventListener('keyup',function(){
+        var input=this.value
+        var pass='sazid';
+        
+        if(input==pass){
+            document.querySelector('h1').innerHTML="<font color='green' style='float:right'><i class='fas fa-check'></i>  Password matched</font>"; 
+        } else{
+            document.querySelector('h1').innerHTML="<font color='red'><i class='fas fa-times'></i>  Password not matched</font>" ; 
+        }
+        document.querySelector('h2').innerHTML=input ;
+    }) ;
+    function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}/*
+document.querySelector('h1').prepend(document.createElement('h3'));
+document.querySelector('h3').innerHTML='hello';
+document.querySelector('h3').className='hello abc moreclass' ;//it changes the existing class
+document.querySelector('h1').classList.add('style') ;//adds new class
+document.querySelector('h3').setAttribute('id','awesome') ;//it changes the existing class 
+*/
+//Print option in javascript
+
+document.querySelector('#print').addEventListener('click',function(){
+ var myWindow= window.open(null,'PRINT WINDOW','width=500px,height=500px,left=300px,top=100px')
+ myWindow.document.write("<h1 style='text-align:center; line-height:300px; font-size:3rem;'>Hello</h1>")
+})
+   </script>
+</body>
+</html>

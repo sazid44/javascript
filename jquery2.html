@@ -11,6 +11,8 @@
     <input type="text" id='p2'><br><br>
     <input type="submit" id='login'><br><br>
     <button id='myButton'>add animation</button>
+    <button id='bg'>Change background</button>
+
     <button id='myBtn'>Hide</button>
     <button id='myBtn1'>Show</button>
     <button id='myBtn2'>Show & Hide</button>
@@ -43,10 +45,14 @@ if(pass1!="" && pass2!=""){
 }
 })
 
+/////Buttons that change all
+ 
     $('#myButton').click(function(){
-    $('#myDiv').animate({"background-color":"green"});
+    $('#myDiv').animate({height:"200px"},100);//animate method consists only numeric value type property
 });  
-
+$('#bg').click(function(){
+    $('#myDiv').css({backgroundColor:'gray'}) ;
+});
 
 
 $('#myBtn').click(function(){
