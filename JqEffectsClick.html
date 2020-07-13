@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jquery</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body> 
     <input type="text" id='p1'><br><br>
     <input type="text" id='p2'><br><br>
     <input type="submit" id='login'><br><br>
     <button id='myButton'>add animation</button>
     <button id='bg'>Change background</button>
-
+    <button id='stop'>Stop</button>
     <button id='myBtn'>Hide</button>
     <button id='myBtn1'>Show</button>
     <button id='myBtn2'>Show & Hide</button>
@@ -26,11 +26,11 @@
     <button id='myBtn10'> slideDown </button>
     <button id='myBtn11'>slideUp & slideDown </button>
     <button id='myBtn12'>Toggle slide </button>
-    
+    <div id="newdiv" style="width: 100px;height: 50px;line-height: 50px;">Hello world</div>
     <div id='myDiv' class='my-style'><p>Ea consetetur voluptua diam consetetur eirmod. Ea et est eirmod amet erat nonumy et, rebum sadipscing nonumy kasd sit ut elitr lorem et, ut dolor dolore erat sadipscing lorem sea dolores ipsum, ipsum diam sadipscing dolore sanctus eirmod kasd, dolor gubergren lorem dolores et no erat amet, dolore rebum elitr justo dolores sed, vero duo takimata lorem lorem et sed amet rebum, dolore dolor tempor diam stet. Clita sit eirmod duo magna amet accusam voluptua justo. Sit magna consetetur vero et et. Eirmod tempor ipsum tempor diam sanctus. Lorem sit dolor invidunt ipsum, sadipscing amet sit sea ut, dolores et ipsum erat tempor amet eirmod at labore takimata. Dolor elitr ea takimata sed, dolores sea rebum magna takimata eirmod dolore est ipsum, ut ea dolor nonumy justo eos ipsum, eos ea dolor aliquyam consetetur erat kasd sit stet, at et lorem erat sed erat labore, ipsum sea clita et stet sed lorem elitr et. Sit magna voluptua kasd amet tempor at est lorem. Et nonumy amet lorem lorem, elitr nonumy sanctus dolores tempor, ut kasd sit sed kasd diam erat kasd. Vero diam justo clita justo vero justo, at gubergren lorem sanctus tempor lorem, dolor sea et ea amet justo.</p>
     </div>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="text/javascript">
 $('#login').click(function(){
     var pass1=$('#p1').val()
     var pass2=$('#p2').val()
@@ -46,9 +46,12 @@ if(pass1!="" && pass2!=""){
 })
 
 /////Buttons that change all
- 
+ $('#stop').click(function(){
+ $('#myDiv').stop();
+ });
+ //animate method consists only numeric value type property
     $('#myButton').click(function(){
-    $('#myDiv').animate({height:"200px"},100);//animate method consists only numeric value type property
+    $('#myDiv').animate({height:"200px",opacity:"0.5",marginLeft: "200px",marginTop: "100px"},1000);
 });  
 $('#bg').click(function(){
     $('#myDiv').css({backgroundColor:'gray'}) ;
@@ -59,10 +62,14 @@ $('#myBtn').click(function(){
     $('#myDiv').hide(2000)
 })
 $('#myBtn1').click(function(){
-    $('#myDiv').show()
+    $('#myDiv').show(2000,function(){
+        $('#newdiv').addClass('csStyle')
+       alert('The show is over')
+    })
+  
 })
 $('#myBtn2').click(function(){
-    $('#myDiv').show(2000).hide(1000)
+    $('#myDiv').hide(1000).show(2000)
 })
 $('#myBtn3').click(function(){
     $('#myDiv').toggle()
@@ -74,7 +81,7 @@ $('#myBtn5').click(function(){
     $('#myDiv').fadeOut()
 })
 $('#myBtn6').click(function(){
-    $('#myDiv').fadeIn(2000).fadeOut(1000)
+    $('#myDiv').fadeOut(1000).fadeIn(2000)
 })
 $('#myBtn7').click(function(){
     $('#myDiv').fadeToggle()
@@ -86,7 +93,9 @@ $('#myBtn9').click(function(){
     $('#myDiv').slideUp()
 })
 $('#myBtn10').click(function(){
-    $('#myDiv').slideDown()
+    $('#myDiv').slideDown(1000,function(){
+        $('#myDiv').css('background','orange')
+  })
 })
 $('#myBtn11').click(function(){
     $('#myDiv').slideUp(2000).slideDown(1000)
@@ -95,7 +104,4 @@ $('#myBtn12').click(function(){
     $('#myDiv').slideToggle()
 })
 
-
-    </script>
-</body>
-</html>
+</script>

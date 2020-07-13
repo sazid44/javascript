@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery</title>
     <link rel="stylesheet" href="style.css" />
+
 </head>
-<body>
-    <a href="http://google.com" target="blank">google</a>
+<body> 
+
+<a href="http://google.com" target="blank">google</a>
     <h1 class=my-class>demo</h1>
     <div ><h1>Bangladesh</h1> </div>
     <h1 id=my-id>demo</h1>
     <h1 id=second-id>demo</h1>
     <p>This is para 1</p>
     <h2>This is css with jquery</h2>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <h1 id=button>Click in the button</h1>
     <button id='css'>Click me</button> <br><br><br>
 
@@ -22,7 +24,17 @@
     <button class='myButton'>button2</button>
     <button class='myButton'>button3</button>
   <h1 class='multi'>Click any Button</h1>
-    <script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+//The start of JQuery
+ $(document).ready(function(){
+// jQuery methods go here...
+//This is to prevent any jQuery code from running before the document is finished loading (is ready).
+});
+//The jQuery team has also created an even shorter method for the document ready event:
+$(function(){
+// jQuery methods go here...
+});//
         //document.querySelector('h1').innerHTML='sazid'
         $('.my-class').text('sazid')
         $('div h1').html('<i> sazid</i>')
@@ -31,13 +43,16 @@
         var myPara=$('<p></p>').text('This is para 2')
         $('p').before(myPara)
         //$('p').after(myPara)
+    //Get & Set method with Jquery 
 //document.querySelector('a').getAttribute('href'); 
 //document.querySelector('a').setAttribute('href','https://www.studywithanis.com')
 $('a').attr('href')
 $('a').attr('href','https://www.studywithanis.com')
 //$('a').removeAttr('href')  
- //CSS manipulation
- //$('h2').css('font-size','3rem')   
+ /**
+  *?CSS manipulation
+  */
+  //$('h2').css('font-size','3rem')   
  //$('h2').css({'color':'green','font-style':'italic'}) 
  $('h2').addClass('csStyle csStyle1')   
  //document.querySelector('button').addEventListener('click',function(){
@@ -57,10 +72,4 @@ $('.myButton').click(function(){
 var value=this.innerHTML;
 $('.multi').text(value + ' is clicked')})
 
-   
-    
-    
-    
-    </script>
-</body>
-</html>
+</script>

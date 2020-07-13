@@ -1,4 +1,4 @@
-//Use of forEach
+//*Use of forEach
 numbers=[10,20,30,40,50]
 squreNumbers=[]
 numbers.forEach(function (x){
@@ -14,14 +14,14 @@ arr[index]=x+5;
 console.log(numbers);
 
 
-//MAP function
+//*MAP function
 newArray=numbers.map(function (x){
 return x*x;
 })
 console.log(newArray);
 
 
-//FILTER function
+//*FILTER function
 filteredArray=numbers.filter(function (x){
 return x>10
 })
@@ -35,14 +35,14 @@ for(var x=m; x<=n; x=x+1){
     sum=sum+x;
 }
 document.write(sum); */
-//use of function
+//*use of function
 function squre(num1,num2){
     var result=num1*num2;
     console.log('sum='+result);
    
 }
 squre(5,6)
-//Use of Array
+//*Use of Array
 //method 01
 var names=['a','b','c','d','e']
 names.push('f')//pushes element at the last
@@ -52,7 +52,7 @@ names.shift() //deletes element from the first
 
 console.log(names[0]);
 
-//use of splice method in array
+//*use of splice method in array
 names.splice(4,0,'f','g','h')
 console.log(names);
 names.splice(1,2)

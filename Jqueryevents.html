@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="display: inline;">O hello!</h1><br><br><br>
+    <input type="text" name="" id=""><br><br>
+   <h1 id="new" style="display: inline;">See the magic of On method</h1><br><br>
+    <h1 id="mouse" style="display: inline;">2nd Hello!</h1><br>
+   <p id="p1" style="float: right;font-size: 2rem;">Enter my area to see what happens...</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$("h1").dblclick(function(){
+  $(this).slideUp();
+});
+
+$("p").mouseenter(function(){
+  alert("How are you today!");
+});
+$("p").mouseleave(function(){
+  alert("Bye! You now leave the area!");
+});
+//The hover() method takes two functions and is a combination of the mouseenter() and mouseleave() methods.
+$("#mouse").hover(function(){
+  alert("You entered 2nd Hello!");
+},
+function(){
+  alert("Bye! You now leave 2nd Hello!");
+});
+/*
+$("#mouse").mousedown(function(){
+  alert("!Mouse down over h1");
+});
+$("#mouse").mouseup(function(){ //you have to leave the mouse
+  alert("!Mouse up over h1");
+});*/
+$("input").focus(function(){
+  $(this).css("background-color", "green");
+});
+$("input").blur(function(){
+  $(this).css("background-color", "yellow");
+});
+//The on() method attaches one or more event handlers for the selected elements.
+/*$("#new").on("click", function(){
+  $(this).hide();
+});*/
+$("#new").on({
+  mouseenter: function(){
+    $(this).css("background-color", "lightgray");
+  },
+  mouseleave: function(){
+    $(this).css("background-color", "lightblue");
+  },
+  click: function(){
+    $(this).css("background-color", "yellow");
+  }
+});
+</script>
+</body>
+</html>

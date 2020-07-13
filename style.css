@@ -22,11 +22,13 @@ width: 400px;
 .anim{
     box-shadow: 0 15px 18px 0 tomato;
     opacity: 0.5;
+   color: #3498Db;
 }
 .csStyle{
     color: #000;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     box-shadow: 0 15px 18px 0 tomato;
+    background-color: yellow;
 }
 .csStyle1{
     font-style: italic;
@@ -40,3 +42,4 @@ width: 400px;
     padding:10px ;
     background-color: lightcoral;
 }
+
