@@ -62,6 +62,7 @@ new myClass("Passing parameter inside constructor");
 var obj=new myClass;
 obj.myFun();
 myClass.stFun();
+
 //class inheritance
 class parent{
     parentFun(){
