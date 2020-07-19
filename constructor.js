@@ -29,7 +29,7 @@ console.log(student3.name);
 */
  //Use of constructor
  function Student(name,age,gpa,lang){
-     this.name=name
+     this.name=name //This is a variable inside a class and can store data
      this.age=age
      this.gpa=gpa
      this.lang=lang

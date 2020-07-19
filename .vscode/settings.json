@@ -1,5 +1,10 @@
 {
     "better-comments.tags": [
+
+
+
+
+
         
 
 
@@ -25,17 +30,28 @@
             "backgroundColor": "transparent"
         },
         {
-            "tag": "todo",
+            "tag": "`",
             "color": "#FF8C00",
             "strikethrough": false,
             "backgroundColor": "transparent"
         },
         {
             "tag": "*",
-            "color": "#98C379",
+            "color": "black",
+            "strikethrough": false,
+            "backgroundColor": "white"
+        },
+         {
+            "tag": "/",
+            "color": "#ff00ff",
             "strikethrough": false,
             "backgroundColor": "transparent"
         },
-        
-    ]
+    ],
+    "better-comments.highlightPlainText": true,
+    "easy-highlight.highlightColor": "#00ff1d",
+    "editor.tokenColorCustomizations":{
+        "comments": "#ed97bf"
+    },
+    "liveServer.settings.port": 5501,
 }

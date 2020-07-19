@@ -22,7 +22,7 @@
 </select><br><br>
 
 <input type="text" id="fname" onchange="myFunction()">
-<!--Inner javascript-->
+<!--*Inner javascript-->
    <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
    <script>
    
@@ -43,7 +43,7 @@
         var pass='sazid';
         
         if(input==pass){
-            document.querySelector('h1').innerHTML="<font color='green' style='float:right'><i class='fas fa-check'></i>  Password matched</font>"; 
+            document.querySelector('h1').innerHTML="<font color='green'><i class='fas fa-check'></i>  Password matched</font>"; 
         } else{
             document.querySelector('h1').innerHTML="<font color='red'><i class='fas fa-times'></i>  Password not matched</font>" ; 
         }
